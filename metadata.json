@@ -1,0 +1,6 @@
+{
+  "name": "Elina & David — Wedding Invitation",
+  "description": "Digital wedding invitation for Elina & David celebrating their marriage on October 18, 2026 at The Glass House, ICC Abuja.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

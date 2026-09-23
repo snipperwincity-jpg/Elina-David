@@ -1,0 +1,124 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Cormorant Garamond', Georgia, serif;
+    --font-script: 'Pinyon Script', cursive;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+/* Custom smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Parchment and luxury invitation textures */
+.bg-parchment {
+  background-color: #FAF7F2;
+  background-image: radial-gradient(#E8DEC8 0.75px, transparent 0.75px), radial-gradient(#E8DEC8 0.75px, #FAF7F2 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.bg-ivory-card {
+  background-color: #FFFDF9;
+  box-shadow: 0 10px 40px -10px rgba(84, 64, 45, 0.08), 0 0 0 1px rgba(184, 154, 122, 0.15);
+}
+
+/* Arched frame styling from the reference video */
+.arched-card-border {
+  border: 1px solid rgba(180, 145, 110, 0.3);
+  border-radius: 9999px 9999px 16px 16px;
+}
+
+/* 3D Gate door perspective */
+.perspective-1200 {
+  perspective: 1400px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Gold foil sheen */
+.gold-sheen {
+  background: linear-gradient(135deg, #c5a059 0%, #ecd599 35%, #b38b47 70%, #d4b574 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gold-border-sheen {
+  border-image: linear-gradient(135deg, #c5a059 0%, #ecd599 50%, #b38b47 100%) 1;
+}
+
+/* Animations */
+@keyframes softPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes sealGlow {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(197, 160, 89, 0.3), inset 0 0 15px rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 35px rgba(197, 160, 89, 0.6), inset 0 0 25px rgba(255, 255, 255, 0.7);
+  }
+}
+
+@keyframes goldSweep {
+  0% {
+    transform: translateX(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(200%) rotate(45deg);
+  }
+}
+
+.animate-seal-glow {
+  animation: sealGlow 3s ease-in-out infinite;
+}
+
+.animate-soft-pulse {
+  animation: softPulse 2.5s ease-in-out infinite;
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.animate-gold-sweep {
+  animation: goldSweep 3.5s ease-in-out infinite;
+}
